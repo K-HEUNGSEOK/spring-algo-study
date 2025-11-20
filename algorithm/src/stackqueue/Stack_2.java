@@ -1,6 +1,10 @@
+package stackqueue;
+
 import java.io.FileInputStream;
-import java.util.*;
-public class Main {
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Stack_2 {
     public static void main(String[] args) throws Exception {
         System.setIn(new FileInputStream("src/input.txt"));
         Scanner sc = new Scanner(System.in);
