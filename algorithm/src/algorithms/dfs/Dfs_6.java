@@ -1,4 +1,4 @@
-package dfs;
+package algorithms.dfs;
 
 import java.io.FileInputStream;
 import java.util.Scanner;

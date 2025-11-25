@@ -1,4 +1,4 @@
-package hash;
+package algorithms.hash;
 
 import java.io.FileInputStream;
 import java.util.Collections;

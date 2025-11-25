@@ -1,7 +1,6 @@
-package sort;
+package algorithms.sort;
 
 import java.io.FileInputStream;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;

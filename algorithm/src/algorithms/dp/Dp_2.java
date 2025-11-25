@@ -1,4 +1,4 @@
-package dp;
+package algorithms.dp;
 
 import java.io.FileInputStream;
 import java.util.Arrays;

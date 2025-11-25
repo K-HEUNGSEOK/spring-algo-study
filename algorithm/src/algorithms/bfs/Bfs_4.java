@@ -1,4 +1,4 @@
-package bfs;
+package algorithms.bfs;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;

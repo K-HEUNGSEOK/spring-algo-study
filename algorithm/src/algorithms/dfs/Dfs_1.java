@@ -1,11 +1,8 @@
-package dfs;
+package algorithms.dfs;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.Scanner;
 
 public class Dfs_1 {

@@ -1,4 +1,4 @@
-package stackqueue;
+package algorithms.stackqueue;
 
 import java.io.FileInputStream;
 import java.util.ArrayDeque;

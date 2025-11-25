@@ -1,4 +1,4 @@
-package greedy;
+package algorithms.greedy;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;

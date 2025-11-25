@@ -1,4 +1,4 @@
-package sort;
+package algorithms.sort;
 
 import java.io.FileInputStream;
 import java.util.Scanner;

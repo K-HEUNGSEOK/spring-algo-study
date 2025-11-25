@@ -1,4 +1,4 @@
-package dp;
+package algorithms.dp;
 
 import java.io.FileInputStream;
 import java.util.Scanner;
@@ -17,7 +17,7 @@ public class Dp_3 {
         for(int i = 1 ; i < dp.length ; i ++) {
             dp[i] = Integer.MAX_VALUE;
         }
-        //dp[i] 라는 금액을 만드는데 드는 최소 동전 갯수 [0]은 04
+        //algorithms.dp[i] 라는 금액을 만드는데 드는 최소 동전 갯수 [0]은 04
         for(int i = 0 ; i < n ; i ++) {
             for(int j = coin[i] ; j < dp.length; j ++) {
 
