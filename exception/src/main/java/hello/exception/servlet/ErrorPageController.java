@@ -1,9 +1,15 @@
 package hello.exception.servlet;
 
-import jakarta.servlet.RequestDispatcher; // 추가
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -33,6 +39,18 @@ public class ErrorPageController {
         return "error-page/500";
     }
 
+    @RequestMapping(value = "/error-page/500", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Map<String,Object>> errorPage500Api(HttpServletRequest request, HttpServletResponse response){
+        log.info("API errorPage 500");
+        Map<String,Object> map = new HashMap<>();
+        Exception ex = (Exception) request.getAttribute(ERROR_EXCEPTION);
+        map.put("status", request.getAttribute(ERROR_STATUS_CODE)); //사용자한테 보여주는 값
+        map.put("message", ex.getMessage());
+
+        //이건 인터넷 브라우저에서 코드를 500으로 보여주는 것
+        Integer statusCode = (Integer) request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
+        return new ResponseEntity<>(map, HttpStatusCode.valueOf(statusCode));
+    }
     private void printErrorInfo(HttpServletRequest request) {
         log.info("ERROR_SERVLET_NAME : {}", request.getAttribute(ERROR_SERVLET_NAME));
         log.info("ERROR_REQUEST_URI : {}", request.getAttribute(ERROR_REQUEST_URI));
