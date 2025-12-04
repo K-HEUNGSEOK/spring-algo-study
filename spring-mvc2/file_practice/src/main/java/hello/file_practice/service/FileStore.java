@@ -42,6 +42,6 @@ public class FileStore {
     private static String getString(String originalFilename, String uuid) {
         int position = originalFilename.lastIndexOf(".");
         String substring = originalFilename.substring(position + 1);
-        return uuid + ":" + substring;
+        return uuid + "." + substring;
     }
 }
