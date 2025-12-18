@@ -8,4 +8,5 @@ SELECT customer_name, COUNT(*) AS 주문횟수,
                       WHERE order_date < '2025-05-14' 
                       GROUP BY customer_name 
                       HAVING COUNT(*) >= 2 
-                      ORDER BY 총구매금액 DESC;
+                      ORDER BY 총구매금액 DESC
+                      LIMIT 1;
